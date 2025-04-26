@@ -17,7 +17,12 @@ public class MQTTConfig {
     public MqttClient mqttClient() throws Exception{
         MqttClient client = new MqttClient(broker, MqttClient.generateClientId(), new MemoryPersistence());
         MqttConnectOptions options = new MqttConnectOptions();
+
         options.setCleanSession(true);
+        options.setAutomaticReconnect(true);
+        options.setConnectionTimeout(10);
+        options.setKeepAliveInterval(60);
+
         client.connect(options);
         System.out.println("✅ Connected to MQTT broker at: " + broker);
         return client;

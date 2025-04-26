@@ -16,14 +16,17 @@ public class SensorData {
 
     private String value;
 
+    private boolean alert;
+
     private LocalDateTime timestamp;
 
     public SensorData(){
 
     }
 
-    public SensorData(String value, LocalDateTime timestamp) {
+    public SensorData(String value, boolean alert, LocalDateTime timestamp) {
         this.value = value;
+        this.alert = alert;
         this.timestamp = timestamp;
     }
 
@@ -49,5 +52,13 @@ public class SensorData {
 
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public boolean isAlert() {
+        return alert;
+    }
+
+    public void setAlert(boolean alert) {
+        this.alert = alert;
     }
 }

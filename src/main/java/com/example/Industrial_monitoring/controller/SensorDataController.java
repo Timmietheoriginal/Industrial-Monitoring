@@ -22,4 +22,9 @@ public class SensorDataController {
     public List<SensorData> getAllData(){
         return repo.findAll();
     }
+
+    @GetMapping("/alerts")
+    public List<SensorData> getAlerts(){
+        return repo.findByAlertTrue();
+    }
 }
