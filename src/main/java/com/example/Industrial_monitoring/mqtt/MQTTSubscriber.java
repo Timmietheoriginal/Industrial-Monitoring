@@ -1,4 +1,4 @@
-package com.example.Industrial_monitoring;
+package com.example.Industrial_monitoring.mqtt;
 
 import com.example.Industrial_monitoring.model.SensorData;
 import com.example.Industrial_monitoring.repository.SensorDataRepository;
